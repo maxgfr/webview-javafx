@@ -38,9 +38,7 @@ public class Client {
             URL aURL = new URL(URL);
             
             URL = aURL.getHost();
-            
-            System.out.println(URL);
-            
+                    
             Socket socketClient = new Socket(URL,80); 
             
             BufferedReader  in = new BufferedReader(new InputStreamReader(socketClient.getInputStream(), "utf-8"));

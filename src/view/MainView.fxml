@@ -8,39 +8,37 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
-    
-   <top>
-      <JFXTextField fx:id="URL" BorderPane.alignment="CENTER" />
+   
+    <top>
+      <HBox alignment="CENTER">
+         <children>       
+            <JFXTextField fx:id="URL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" />
+            
+            <JFXButton fx:id="search" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onSearch" prefWidth="400.0" text="Search" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" />  
+         </children>
+      </HBox>
    </top>
    
+    
    <center>
-      <SplitPane dividerPositions="0.5" orientation="HORIZONTAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.80" orientation="HORIZONTAL" prefHeight="400.0" prefWidth="320.0" BorderPane.alignment="CENTER">
         <items>
            
             <AnchorPane>
                 <children>
-                    <WebView fx:id="webView"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    <WebView fx:id="webView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                 </children>
             </AnchorPane>
             
             <AnchorPane>
                 <children>
-                    <JFXTextArea fx:id="content" wrapText="true" BorderPane.alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    <JFXTextArea fx:id="content" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER" />
                 </children>
             </AnchorPane>
             
         </items>
       </SplitPane>
    </center>
-   
-   <bottom>
-      <AnchorPane>
-            <children>
-                <JFXButton fx:id="search" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSearch" prefWidth="400.0" text="Search" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            </children>
-        </AnchorPane>
-   </bottom>
-   
+
 </BorderPane>
